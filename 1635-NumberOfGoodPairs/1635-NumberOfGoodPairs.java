@@ -1,0 +1,16 @@
+// Last updated: 7/28/2025, 12:28:55 PM
+class Solution {
+    public int numIdenticalPairs(int[] nums) {
+        int count=0;
+        int n = nums.length;
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<n;j++)
+            {
+                if(nums[i]==nums[j]&&i<j)
+                    count++;
+            }
+        }
+        return count;
+    }
+}
